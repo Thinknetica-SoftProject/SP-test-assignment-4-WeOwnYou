@@ -9,5 +9,10 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
-
-
+f = File.new("data/3.txt")
+sum = 0
+while line = f.gets
+  temp = line.split(" ").map{|x| x.to_i};
+  sum += (temp.max - temp.min)
+end
+puts sum
