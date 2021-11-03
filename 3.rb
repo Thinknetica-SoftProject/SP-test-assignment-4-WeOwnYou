@@ -12,6 +12,7 @@
 f = File.new("data/3.txt")
 sum = 0
 while line = f.gets
-  sum += line.split(" ").max.to_i - line.split(" ").min.to_i
+  temp = line.split(" ").map{|x| x.to_i};
+  sum += (temp.max - temp.min)
 end
 puts sum
