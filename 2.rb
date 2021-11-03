@@ -17,8 +17,7 @@
 ## Решение:
 require 'digest'
 num = 0
-st = ""
-gets st
+st = gets.chomp
 while(true)
   md5 = Digest::MD5.hexdigest (st + num.to_s)
   hash_t = md5.to_s
