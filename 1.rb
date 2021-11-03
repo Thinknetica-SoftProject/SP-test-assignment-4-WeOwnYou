@@ -15,7 +15,17 @@
 #
 #
 ## Решение:
-
-
-
-
+f = File.new("data/1.txt")
+content = f.read
+f.close
+num = 0
+i = 0
+while i < content.length
+  if content[i] == "("
+    num += 1
+  elsif content[i] == ")"
+    num -= 1
+  end
+  i += 1
+end
+puts num
