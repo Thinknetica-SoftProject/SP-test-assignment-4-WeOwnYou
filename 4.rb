@@ -15,5 +15,10 @@
 #
 #
 ## Решение:
-
-
+f = File.new("data/4.txt")
+sum = 0
+while line = f.gets
+  line = line.split("x").map{|x| x.to_i}
+  sum += 2 * (line[0] * line[1] + line[0] * line[2] + line[2] * line[1]) + line.sort[1] * line.min
+end
+puts sum

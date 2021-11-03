@@ -9,5 +9,9 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
-
-
+f = File.new("data/3.txt")
+sum = 0
+while line = f.gets
+  sum += line.split(" ").max.to_i - line.split(" ").min.to_i
+end
+puts sum

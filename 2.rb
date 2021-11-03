@@ -15,4 +15,14 @@
 #
 #
 ## Решение:
-
+require 'digest'
+num = 0
+while(true)
+  md5 = Digest::MD5.hexdigest ("abcdef" + num.to_s)
+  hash_t = md5.to_s
+  if(hash_t[0] == "0" && hash_t[1] == "0" &&  hash_t[2] == "0" && hash_t[3] == "0" && hash_t[4] == "0")
+    break
+  end
+  num += 1
+end
+puts num
