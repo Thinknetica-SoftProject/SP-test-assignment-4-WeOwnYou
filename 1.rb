@@ -18,8 +18,8 @@
 f = File.new("data/1.txt")
 content = f.read
 f.close
-ar = content.split("");
 num = 0
+ar = content.split("");
 for i in ar
   if i == "("
     num += 1
